@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        
+
+        body {background-color:black;
+            background-image:url("carbackground1.jpg");
+            background-repeat: no-repeat;
+                   }
+        .div1{
+            background: rgba(234, 44, 44, 0.5);
+            width: 500px;
+            padding: 50px;
+            margin-left: 450px;
+            margin-top:80px;
+            color:white; }
+        label{font-size: 25px;
+              font-style:bold;
+              }
+        input{font-size: 15px;
+              margin-left:20px;}
+        button{height:40px;
+               width:70;
+               background-color:yellow;}
+    </style>
+</head>
+
+<body>
+
+    <div class="div1">
+        <form action="{{ url_for('predict')}}" method="post">
+            <h1>Predictive analysis</h1>
+            <label>Enter Model Year</label>
+            <input id="first" name="Year" type="number "> <br>
+
+            <label>Enter Showroom Price</label>
+            <input id="second" name="Present_Price" required="required"><br>
+
+            <label>Enter Kilometer Drived </label>
+            <input id="third" name="Kms_Driven" required="required"><br>
+
+            <label>Enter Owner no.(1,2,3)? </label>
+            <input id="fourth" name="Owner" required="required"><br>
+
+            <label>Enter  Fuel Type</label><select name="Fuel_Type_Petrol" id="fuel" required="required">
+                <option value="Petrol">Petrol</option>
+                <option value="Diesel">Diesel</option>
+                <option value="Diesel">CNG</option>
+            </select> <br>
+
+            <label>Are you A Dealer  ?</label><select name="Seller_Type_Individual" id="resea" required="required">
+                <option value="Dealer">Dealer</option>
+                <option value="Individual">Individual</option>
+            </select> <br>
+
+            <label>Enter Transmission type</label><select name="Transmission_Mannual" id="research" required="required">
+                <option value="Mannual">Manual Car</option>
+                <option value="Automatic">Automatic Car</option>
+            </select>
+            <br><br><button id="sub" type="submit ">Calculate the Selling Price</button>
+            <br>
+
+
+
+
+        </form>
+
+    </div>
+
+
+
+        
+
+
+
+
+    
+</body>
+
+</html>
